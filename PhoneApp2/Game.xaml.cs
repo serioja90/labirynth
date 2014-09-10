@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Navigation;
+using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using System.Windows.Threading;
+using PhoneApp2.src;
+using Microsoft.Devices.Sensors;
+using System.Diagnostics;
+using FarseerPhysics.Dynamics;
+using FarseerPhysics.Factories;
+using FarseerPhysics.Common;
+using FarseerPhysics;
+using FarseerPhysics.Collision.Shapes;
+using Microsoft.Xna.Framework;
+
+namespace PhoneApp2 {
+  public partial class Game : PhoneApplicationPage {
+    private Accelerometer accelerometer;
+    private Ball ball;
+    private Level level;
+    DispatcherTimer timer;
+    World world;
+    Body ballBody;
+    Microsoft.Xna.Framework.Vector3 currentAcceleration;
+    public Game() {
+      InitializeComponent();
+      accelerometer = new Microsoft.Devices.Sensors.Accelerometer();
+      accelerometer.CurrentValueChanged += OnCurrentValueChanged;
+      accelerometer.Start();
+      ConvertUnits.SetDisplayUnitToSimUnitRatio(50f);
+      world = new World(Vector2.Zero);
+      world.ContactManager.OnBroadphaseCollision += OnBroadphaseCollision;
+      LayoutRoot.SizeChanged += onGridSizeChanged;
+      timer = new DispatcherTimer();
+      timer.Interval = new System.TimeSpan(0, 0, 0, 0, 33); // timer interval in milliseconds
+      timer.Tick += onTick;
+      timer.Start();
+    }
+
+    private void OnBroadphaseCollision(ref FixtureProxy proxyA, ref FixtureProxy proxyB) {
+    }
+
+    protected override void OnNavigatedFrom(NavigationEventArgs e) {
+      if (timer != null) {
+        timer.Stop();
+      }
+      if (accelerometer != null && accelerometer.State == SensorState.Ready) {
+        accelerometer.Stop();
+      }
+    }
+
+
+    private void onGridSizeChanged(object sender, SizeChangedEventArgs e) {
+      Debug.WriteLine("width: " + LayoutRoot.ActualWidth + " height: " + LayoutRoot.ActualHeight);
+      if (ball == null) {
+        float width = (float)LayoutRoot.ActualWidth;
+        float height = (float)LayoutRoot.ActualHeight;
+        ballBody = BodyFactory.CreateBody(world, new Vector2(ConvertUnits.ToSimUnits(width / 2f), ConvertUnits.ToSimUnits(height / 2f)));
+        ballBody.BodyType = BodyType.Dynamic;
+        ballBody.Friction = 0.005f;
+        CircleShape circleShape = new CircleShape(ConvertUnits.ToSimUnits(8f), 1f);
+        Fixture fixture = ballBody.CreateFixture(circleShape);
+        fixture.OnCollision += OnBalCollision;
+        ball = new Ball(canvas, 8, new System.Windows.Point(width / 2f, height / 2f));
+      }
+      if (level == null) {
+        level = new Level(1, canvas);
+        Body wallBody;
+        System.Windows.Point position;
+        foreach (Wall wall in level.getWalls()) {
+          position = wall.getPosition();
+          wallBody = BodyFactory.CreateRectangle(
+            world, 
+            ConvertUnits.ToSimUnits(wall.getWidth()),
+            ConvertUnits.ToSimUnits(wall.getHeight()),
+            0.001f,
+            new Vector2(ConvertUnits.ToSimUnits(position.X + wall.getWidth() / 2f), ConvertUnits.ToSimUnits(position.Y + wall.getHeight() / 2f))
+          );
+        }
+      }
+    }
+
+    private bool OnBalCollision(Fixture fixtureA, Fixture fixtureB, FarseerPhysics.Dynamics.Contacts.Contact contact) {
+      Debug.WriteLine("COLLISION DETECTED");
+      return true;
+    }
+
+    private void onTick(object sender, System.EventArgs e) {
+      if (ball != null && level != null && currentAcceleration != null) {
+        ballBody.ApplyForce(new Vector2(currentAcceleration.X * 9.8f, -currentAcceleration.Y * 9.8f));
+        world.Step(0.03333f);
+        ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
+        //ball.update(timer.Interval.TotalMilliseconds, currentAcceleration,level.getWalls());
+      }
+    }
+
+
+    private void OnCurrentValueChanged(object sender, Microsoft.Devices.Sensors.SensorReadingEventArgs<Microsoft.Devices.Sensors.AccelerometerReading> e) {
+      AccelerometerReading reading = e.SensorReading;
+      currentAcceleration = reading.Acceleration;
+    }
+  }
+}
