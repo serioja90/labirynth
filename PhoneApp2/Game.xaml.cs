@@ -21,6 +21,7 @@ using Microsoft.Xna.Framework;
 namespace PhoneApp2 {
   public partial class Game : PhoneApplicationPage {
     private Accelerometer accelerometer;
+    private int currentLevel;
     private Ball ball;
     private Level level;
     DispatcherTimer timer;
@@ -34,7 +35,6 @@ namespace PhoneApp2 {
       accelerometer.Start();
       ConvertUnits.SetDisplayUnitToSimUnitRatio(50f);
       world = new World(Vector2.Zero);
-      world.ContactManager.OnBroadphaseCollision += OnBroadphaseCollision;
       LayoutRoot.SizeChanged += onGridSizeChanged;
       timer = new DispatcherTimer();
       timer.Interval = new System.TimeSpan(0, 0, 0, 0, 33); // timer interval in milliseconds
@@ -42,7 +42,10 @@ namespace PhoneApp2 {
       timer.Start();
     }
 
-    private void OnBroadphaseCollision(ref FixtureProxy proxyA, ref FixtureProxy proxyB) {
+    protected override void OnNavigatedTo(NavigationEventArgs e) {
+      String levelParam = NavigationContext.QueryString["level"].ToString();
+      Debug.WriteLine("LEVEL: " + levelParam);
+      currentLevel = levelParam == null ? 1 : Int16.Parse(levelParam);
     }
 
     protected override void OnNavigatedFrom(NavigationEventArgs e) {
@@ -69,7 +72,7 @@ namespace PhoneApp2 {
         ball = new Ball(canvas, 8, new System.Windows.Point(width / 2f, height / 2f));
       }
       if (level == null) {
-        level = new Level(1, canvas);
+        level = new Level(currentLevel, canvas);
         Body wallBody;
         System.Windows.Point position;
         foreach (Wall wall in level.getWalls()) {

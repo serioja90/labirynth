@@ -18,7 +18,7 @@ namespace PhoneApp2.src {
     public Level(int level, Canvas container){
       this.level = level;
       this.container = container;
-      this.content = ReadFile("resources/levels/1.txt");
+      this.content = ReadFile("resources/levels/" + level.ToString() + ".txt");
       Debug.WriteLine(content);
       this.GenerateWalls();
     }

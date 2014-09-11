@@ -19,7 +19,7 @@ namespace PhoneApp2 {
     }
 
     private void Button_Click(object sender, RoutedEventArgs e) {
-      NavigationService.Navigate(new Uri("/Game.xaml", UriKind.Relative));
+      NavigationService.Navigate(new Uri("/Game.xaml?level=1", UriKind.Relative));
     }
   }
 }

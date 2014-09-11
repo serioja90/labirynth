@@ -1,8 +1,8 @@
-﻿<xapCache source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\PhoneApp2.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/09/2014 01.35.52">
+﻿<xapCache source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\PhoneApp2.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/09/2014 03.09.49">
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="20/08/2014 16.43.12" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Background.png" archivePath="Background.png" lastWriteTime="20/08/2014 16.43.12" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="20/08/2014 16.43.12" />
-  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Debug\PhoneApp2.dll" archivePath="PhoneApp2.dll" lastWriteTime="11/09/2014 01.35.52" />
+  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Debug\PhoneApp2.dll" archivePath="PhoneApp2.dll" lastWriteTime="11/09/2014 03.09.48" />
   <file source="C:\Users\sergiu\Downloads\Farseer Physics Engine 3.5\Farseer Physics Engine 3.5\bin\Windows Phone\Debug\FarseerPhysics WP7.dll" archivePath="FarseerPhysics WP7.dll" lastWriteTime="10/09/2014 01.03.21" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="06/07/2012 02.40.16" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\labirinto con i ponti.bmp" archivePath="labirinto con i ponti.bmp" lastWriteTime="20/08/2014 16.43.12" />
@@ -10,6 +10,11 @@
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\img\wall.jpg" archivePath="resources\img\wall.jpg" lastWriteTime="20/08/2014 20.46.08" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\img\wood_texture.jpg" archivePath="resources\img\wood_texture.jpg" lastWriteTime="20/08/2014 18.40.24" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\levels\1.txt" archivePath="resources\levels\1.txt" lastWriteTime="11/09/2014 01.17.08" />
+  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\levels\2.txt" archivePath="resources\levels\2.txt" lastWriteTime="11/09/2014 02.55.54" />
+  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\levels\3.txt" archivePath="resources\levels\3.txt" lastWriteTime="11/09/2014 03.05.19" />
+  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\levels\4.txt" archivePath="resources\levels\4.txt" lastWriteTime="11/09/2014 03.08.14" />
+  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\levels\5.txt" archivePath="resources\levels\5.txt" lastWriteTime="11/09/2014 03.09.06" />
+  <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\resources\levels\6.txt" archivePath="resources\levels\6.txt" lastWriteTime="11/09/2014 03.09.46" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="20/08/2014 16.43.12" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="10/09/2014 01.05.54" />
   <file source="C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="20/08/2014 16.43.12" />

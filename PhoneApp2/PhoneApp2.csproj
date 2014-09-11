@@ -153,6 +153,11 @@
     <Content Include="resources\img\wall.jpg" />
     <Content Include="resources\img\wood_texture.jpg" />
     <Content Include="resources\levels\1.txt" />
+    <Content Include="resources\levels\2.txt" />
+    <Content Include="resources\levels\3.txt" />
+    <Content Include="resources\levels\4.txt" />
+    <Content Include="resources\levels\5.txt" />
+    <Content Include="resources\levels\6.txt" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
