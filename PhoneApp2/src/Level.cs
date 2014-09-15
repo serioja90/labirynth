@@ -15,15 +15,20 @@ namespace PhoneApp2.src {
     protected List<Wall> walls;
     protected Canvas container;
     protected String content;
+    protected Point start, finish;
     public Level(int level, Canvas container){
       this.level = level;
       this.container = container;
       this.content = ReadFile("resources/levels/" + level.ToString() + ".txt");
       Debug.WriteLine(content);
+      this.start = new Point(Canvas.GetLeft(container), Canvas.GetTop(container));
+      this.finish = new Point(0, 0);
       this.GenerateWalls();
     }
 
     public Wall[] getWalls() { return this.walls.ToArray(); }
+    public Point getStart() { return this.start; }
+    public Point getFinish() { return this.finish; }
 
     private void GenerateWalls() {
       double wallSize = 20;
@@ -35,8 +40,16 @@ namespace PhoneApp2.src {
         chr = content[i];
         switch (chr) {
           case ' ':
+            x += wallSize;
+            break;
           case 'S':
+            this.start.X = x + wallSize / 2;
+            this.start.Y = y + wallSize / 2;
+            x += wallSize;
+            break;
           case 'F':
+            this.finish.X = x + wallSize / 2;
+            this.finish.Y = y + wallSize / 2;
             x += wallSize;
             break;
           case '\n':

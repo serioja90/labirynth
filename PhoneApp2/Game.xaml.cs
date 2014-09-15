@@ -65,7 +65,7 @@ namespace PhoneApp2 {
         float height = (float)LayoutRoot.ActualHeight;
         ballBody = BodyFactory.CreateBody(world, new Vector2(ConvertUnits.ToSimUnits(width / 2f), ConvertUnits.ToSimUnits(height / 2f)));
         ballBody.BodyType = BodyType.Dynamic;
-        ballBody.Friction = 0.005f;
+        ballBody.LinearDamping = 1f;
         CircleShape circleShape = new CircleShape(ConvertUnits.ToSimUnits(8f), 1f);
         Fixture fixture = ballBody.CreateFixture(circleShape);
         fixture.OnCollision += OnBalCollision;
@@ -84,7 +84,10 @@ namespace PhoneApp2 {
             0.001f,
             new Vector2(ConvertUnits.ToSimUnits(position.X + wall.getWidth() / 2f), ConvertUnits.ToSimUnits(position.Y + wall.getHeight() / 2f))
           );
+          wallBody.Restitution = 0.25f;
         }
+        ballBody.Position = new Vector2(ConvertUnits.ToSimUnits(level.getStart().X), ConvertUnits.ToSimUnits(level.getStart().Y));
+        ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
       }
     }
 
@@ -98,7 +101,6 @@ namespace PhoneApp2 {
         ballBody.ApplyForce(new Vector2(currentAcceleration.X * 9.8f, -currentAcceleration.Y * 9.8f));
         world.Step(0.03333f);
         ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
-        //ball.update(timer.Interval.TotalMilliseconds, currentAcceleration,level.getWalls());
       }
     }
 
