@@ -28,7 +28,7 @@ namespace PhoneApp2.src {
       this.container.Children.Add(this.image);
       Canvas.SetLeft(this.image, this.position.X);
       Canvas.SetTop(this.image, this.position.Y);
-      Debug.WriteLine("Wall: (" + position.X + ", " + position.Y + ")");
+      Canvas.SetZIndex(this.image, 2);
     }
 
     public Point getPosition() { return this.position; }

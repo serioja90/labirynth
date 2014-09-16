@@ -37,7 +37,7 @@ namespace PhoneApp2 {
       world = new World(Vector2.Zero);
       LayoutRoot.SizeChanged += onGridSizeChanged;
       timer = new DispatcherTimer();
-      timer.Interval = new System.TimeSpan(0, 0, 0, 0, 33); // timer interval in milliseconds
+      timer.Interval = new System.TimeSpan(0, 0, 0, 0, 20); // timer interval in milliseconds
       timer.Tick += onTick;
       timer.Start();
     }
@@ -92,15 +92,22 @@ namespace PhoneApp2 {
     }
 
     private bool OnBalCollision(Fixture fixtureA, Fixture fixtureB, FarseerPhysics.Dynamics.Contacts.Contact contact) {
-      Debug.WriteLine("COLLISION DETECTED");
       return true;
     }
 
     private void onTick(object sender, System.EventArgs e) {
       if (ball != null && level != null && currentAcceleration != null) {
         ballBody.ApplyForce(new Vector2(currentAcceleration.X * 9.8f, -currentAcceleration.Y * 9.8f));
-        world.Step(0.03333f);
+        world.Step(0.02f);
         ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
+        if (ball.distanceFrom(level.getFinish()) <= ball.getRadius()) {
+          // level completed, go to next level
+          timer.Stop();
+          accelerometer.Stop();
+          Debug.WriteLine("LEVEL COMPLETED");
+          MessageBox.Show("Livello completato!", "Cogratulazioni!", MessageBoxButton.OK);
+          NavigationService.Navigate(new Uri("/Game.xaml?level=" + (level.getLevel() + 1), UriKind.Relative));
+        }
       }
     }
 

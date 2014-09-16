@@ -18,3 +18,6 @@ C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Re
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Release\PhoneApp2.dll
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Release\PhoneApp2.pdb
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Release\XapCacheFile.xml
+C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Release\FarseerPhysics WP7.dll
+C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Release\FarseerPhysics WP7.pdb
+C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Release\PhoneApp2.csprojResolveAssemblyReference.cache

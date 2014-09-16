@@ -98,6 +98,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Ball.cs" />
+    <Compile Include="src\Hole.cs" />
     <Compile Include="src\Level.cs" />
     <Compile Include="src\Wall.cs" />
   </ItemGroup>
@@ -148,6 +149,7 @@
     </Content>
     <Content Include="labirinto con i ponti.bmp" />
     <Content Include="resources\img\ball.png" />
+    <Content Include="resources\img\hole.png" />
     <Content Include="resources\img\wall.jpg" />
     <Content Include="resources\img\wood_texture.jpg" />
     <Content Include="resources\levels\1.txt" />
