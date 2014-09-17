@@ -26,11 +26,11 @@
         <!--ContentPanel - inserire ulteriore contenuto qui-->
         <Grid x:Name="ContentPanel" Height="768" VerticalAlignment="Top" Grid.RowSpan="2" Background="#99000000">
             <Button Click="StartLevel" Tag="1" Content="1" HorizontalAlignment="Left" Margin="75,0,0,403" VerticalAlignment="Bottom" Height="120" Width="120" FontSize="36" Background="#9921E218"/>
-            <Button Click="StartLevel" Tag="2" Content="2" HorizontalAlignment="Left" Margin="288,0,0,403" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000"/>
-            <Button Click="StartLevel" Tag="3" Content="3" HorizontalAlignment="Left" Margin="75,0,0,253" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000"/>
-            <Button Click="StartLevel" Tag="4" Content="4" HorizontalAlignment="Left" Margin="288,0,0,253" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000"/>
-            <Button Click="StartLevel" Tag="5" Content="5" HorizontalAlignment="Left" Margin="75,0,0,103" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000"/>
-            <Button Click="StartLevel" Tag="6" Content="6" HorizontalAlignment="Left" Margin="288,0,0,103" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000"/>
+            <Button Click="StartLevel" Tag="2" Content="2" HorizontalAlignment="Left" Margin="288,0,0,403" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000" IsHitTestVisible="False"/>
+            <Button Click="StartLevel" Tag="3" Content="3" HorizontalAlignment="Left" Margin="75,0,0,253" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000" IsHitTestVisible="False"/>
+            <Button Click="StartLevel" Tag="4" Content="4" HorizontalAlignment="Left" Margin="288,0,0,253" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000" IsHitTestVisible="False"/>
+            <Button Click="StartLevel" Tag="5" Content="5" HorizontalAlignment="Left" Margin="75,0,0,103" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000" IsHitTestVisible="False"/>
+            <Button Click="StartLevel" Tag="6" Content="6" HorizontalAlignment="Left" Margin="288,0,0,103" VerticalAlignment="Bottom" Width="120" Height="120" FontSize="36" Background="#99EA0000" IsHitTestVisible="False"/>
 
         </Grid>
         <!--ContentPanel - inserire ulteriore contenuto qui-->
