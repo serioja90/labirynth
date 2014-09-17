@@ -107,6 +107,7 @@ namespace PhoneApp2 {
           Debug.WriteLine("LEVEL COMPLETED");
           MessageBox.Show("Livello completato!", "Cogratulazioni!", MessageBoxButton.OK);
           NavigationService.Navigate(new Uri("/Game.xaml?level=" + (level.getLevel() + 1), UriKind.Relative));
+          NavigationService.RemoveBackEntry();
         }
       }
     }
