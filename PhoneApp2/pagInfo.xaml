@@ -14,29 +14,26 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot è la griglia radice in cui viene inserito tutto il contenuto della pagina-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contiene il nome dell'applicazione e il titolo della pagina-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="LABYRINTH" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Informazioni" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
-
         <!--ContentPanel - inserire ulteriore contenuto qui-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="31,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+        <Grid x:Name="ContentPanel" Background="#99000000" Grid.RowSpan="2">
+            <TextBlock HorizontalAlignment="Left" Margin="46,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
             	<Run Text="APPLICAZIONE"/>
             	<Run Text=":"/>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="249,61,0,0" TextWrapping="Wrap" Text="Labyrinth" VerticalAlignment="Top" RenderTransformOrigin="-0.159,0.416"/>
-            <TextBlock HorizontalAlignment="Left" Margin="31,132,0,0" TextWrapping="Wrap" Text="VERSIONE:" VerticalAlignment="Top" RenderTransformOrigin="-0.364,-0.201"/>
-            <TextBlock HorizontalAlignment="Left" Margin="249,132,0,0" TextWrapping="Wrap" Text="v 1.0" VerticalAlignment="Top" RenderTransformOrigin="-0.456,0.427"/>
-            <TextBlock HorizontalAlignment="Left" Margin="31,203,0,0" TextWrapping="Wrap" Text="AUTORI:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="249,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="142">
+            <TextBlock HorizontalAlignment="Left" Margin="264,240,0,0" TextWrapping="Wrap" Text="Labyrinth" VerticalAlignment="Top" RenderTransformOrigin="-0.159,0.416"/>
+            <TextBlock HorizontalAlignment="Left" Margin="46,311,0,0" TextWrapping="Wrap" Text="VERSIONE:" VerticalAlignment="Top" RenderTransformOrigin="-0.364,-0.201"/>
+            <TextBlock HorizontalAlignment="Left" Margin="264,311,0,0" TextWrapping="Wrap" Text="v 1.0" VerticalAlignment="Top" RenderTransformOrigin="-0.456,0.427"/>
+            <TextBlock HorizontalAlignment="Left" Margin="46,382,0,0" TextWrapping="Wrap" Text="AUTORI:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="264,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="142">
             	<Run Text="Barisoni Giulio"/>
             	<LineBreak/>
             	<Run Text="Bicciato Alessandro"/>
@@ -47,11 +44,19 @@
             	<LineBreak/>
             	<Run Text="Tomasi Marco"/>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="31,368,0,0" TextWrapping="Wrap" Text="RESPONSABILE:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="249,368,0,0" TextWrapping="Wrap" Text="Mohn Valentina" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="31,442,0,0" TextWrapping="Wrap" Text="CONTATTI:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="249,442,0,0" TextWrapping="Wrap" Text="vmohn@dsi.unive.it" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="46,547,0,0" TextWrapping="Wrap" Text="RESPONSABILE:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="264,547,0,0" TextWrapping="Wrap" Text="Mohn Valentina" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="46,621,0,0" TextWrapping="Wrap" Text="CONTATTI:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="264,621,0,0" TextWrapping="Wrap" Text="vmohn@dsi.unive.it" VerticalAlignment="Top"/>
 
+        </Grid>
+
+        <!--ContentPanel - inserire ulteriore contenuto qui-->
+        <Grid Margin="0,0,2,0" Background="#B0000000" Height="147" VerticalAlignment="Top">
+            <StackPanel Grid.Row="0" Margin="27,10,-27,35">
+                <TextBlock Text="LABYRINTH" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Text="Informazioni" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" HorizontalAlignment="Left" Width="469"/>
+            </StackPanel>
         </Grid>
     </Grid>
 
