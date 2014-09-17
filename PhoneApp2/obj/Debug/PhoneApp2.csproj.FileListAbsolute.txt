@@ -57,25 +57,3 @@ C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\De
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Debug\Game.g.cs
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\FarseerPhysics WP7.dll
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Debug\FarseerPhysics WP7.pdb
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\ApplicationIcon.png
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\Background.png
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\PhoneApp2.dll
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\PhoneApp2.pdb
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\AppManifest.xaml
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\PhoneApp2.xap
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\Microsoft.Phone.Controls.dll
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\FarseerPhysics WP7.pdb
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Debug\Microsoft.Phone.Controls.xml
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.csprojResolveAssemblyReference.cache
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\App.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\Game.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\MainPage.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\menuSceltaLivello.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\pagGuida.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\pagInfo.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\pagOpzioni.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\pagSottomenuGioca.g.cs
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.g.resources
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.dll
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.pdb
-C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\XapCacheFile.xml
