@@ -14,24 +14,28 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot è la griglia radice in cui viene inserito tutto il contenuto della pagina-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contiene il nome dell'applicazione e il titolo della pagina-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="LABYRINTH" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Gioca" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
+        <!--ContentPanel - inserire ulteriore contenuto qui-->
+        <Grid x:Name="ContentPanel" Background="#99000000" Grid.RowSpan="2">
+            <Button Content="Seleziona livello" HorizontalAlignment="Right" Margin="0,0,123,426" VerticalAlignment="Bottom" Height="83" Click="selezionaLivello_Click" Background="#B0000000"/>
+            <Button Content="Carriera" HorizontalAlignment="Right" Margin="0,0,123,312" VerticalAlignment="Bottom" Width="234" Height="83" Click="Button_Click" Background="#B0000000"/>
+            <Button Content="Statistiche" HorizontalAlignment="Right" Margin="0,0,123,197" VerticalAlignment="Bottom" Width="234" Height="83" Background="#B0000000"/>
+        </Grid>
 
         <!--ContentPanel - inserire ulteriore contenuto qui-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,14,0">
-            <Button Content="Seleziona livello" HorizontalAlignment="Left" Margin="113,98,0,0" VerticalAlignment="Top" Height="83" Click="selezionaLivello_Click"/>
-            <Button Content="Carriera" HorizontalAlignment="Left" Margin="113,212,0,0" VerticalAlignment="Top" Width="234" Height="83" Click="Button_Click"/>
-            <Button Content="Statistiche" HorizontalAlignment="Left" Margin="113,327,0,0" VerticalAlignment="Top" Width="234" Height="83"/>
-
+        <Grid Margin="0,0,2,0" Background="#B0000000" Height="147" VerticalAlignment="Top">
+            <StackPanel Grid.Row="0" Margin="27,10,-27,35">
+                <TextBlock Text="LABYRINTH" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Text="Gioca" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" HorizontalAlignment="Left" Width="469"/>
+            </StackPanel>
         </Grid>
     </Grid>
 

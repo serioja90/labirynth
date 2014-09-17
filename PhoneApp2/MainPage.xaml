@@ -11,40 +11,39 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" HorizontalAlignment="Right">
     <phone:PhoneApplicationPage.Background>
-        <ImageBrush Stretch="Fill"/>
+        <ImageBrush Stretch="UniformToFill" ImageSource="/SplashScreenImage.jpg"/>
     </phone:PhoneApplicationPage.Background>
 
     <!--LayoutRoot è la griglia radice in cui viene inserito tutto il contenuto della pagina-->
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" OpacityMask="Black">
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="labirinto con i ponti.bmp" Opacity="0.8">
-                <ImageBrush.RelativeTransform>
-                    <CompositeTransform/>
-                </ImageBrush.RelativeTransform>
-            </ImageBrush>
+            <ImageBrush ImageSource="/SplashScreenImage.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contiene il nome dell'applicazione e il titolo della pagina-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="PageTitle" Text="Labirinth" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-        </StackPanel>
+
 
         <!--ContentPanel - inserire ulteriore contenuto qui-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,0,10,0">
-            <Grid.Background>
-                <ImageBrush Stretch="Fill" ImageSource="/labirinto con i ponti.bmp" Opacity="0.8"/>
-            </Grid.Background>
-            <Button x:Name="opzioni" Content="Opzioni" HorizontalAlignment="Left" Margin="109,176,0,0" VerticalAlignment="Top" Width="230" Height="81" Click="opzioni_Click"/>
-            <Button x:Name="Guida" Content="Guida" HorizontalAlignment="Left" Margin="109,279,0,0" VerticalAlignment="Top" Width="230" Height="81" Click="guida"/>
-            <Button x:Name="riconoscimenti" Content="Informazioni" HorizontalAlignment="Left" Margin="109,385,0,0" VerticalAlignment="Top" Height="81" Width="230" Click="Info"/>
+        <Grid x:Name="ContentPanel" HorizontalAlignment="Left" Width="480" Grid.RowSpan="2" Background="#99000000">
+            <Button x:Name="gioca" Content="Gioca" HorizontalAlignment="Left" Margin="120,0,0,485" Grid.Row="1" VerticalAlignment="Bottom" Width="230" Height="81" Click="gioca_Click" Background="#B0000000"/>
+            <Button x:Name="opzioni" Content="Opzioni" Margin="0,0,129,377" Click="opzioni_Click" HorizontalAlignment="Right" Width="230" Height="81" VerticalAlignment="Bottom" Background="#B0000000"/>
+            <Button x:Name="Guida" Content="Guida" Margin="0,0,129,274" VerticalAlignment="Bottom" Height="81" Click="guida" HorizontalAlignment="Right" Width="230" Background="#B0000000"/>
+            <Button x:Name="riconoscimenti" Content="Informazioni" Margin="0,0,129,168" VerticalAlignment="Bottom" Height="81" Click="Info" HorizontalAlignment="Right" Width="230" Background="#B0000000"/>
         </Grid>
-        <Button x:Name="gioca" Content="Gioca" HorizontalAlignment="Left" Margin="120,68,0,0" Grid.Row="1" VerticalAlignment="Top" Width="230" Height="81" Click="gioca_Click"/>
+        
+        <!--ContentPanel - inserire ulteriore contenuto qui-->
+        <Grid Margin="0,0,2,0" Background="#B0000000" Height="147" VerticalAlignment="Top">
+            <StackPanel Grid.Row="0" Margin="27,10,-27,35">
+                <TextBlock Text="LABYRINTH" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock Text="Menù" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" HorizontalAlignment="Left" Width="469"/>
+            </StackPanel>
+        </Grid>
     </Grid>
- 
+
 </phone:PhoneApplicationPage>
