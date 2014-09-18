@@ -106,7 +106,10 @@ namespace PhoneApp2 {
           accelerometer.Stop();
           Debug.WriteLine("LEVEL COMPLETED");
           MessageBox.Show("Livello completato!", "Cogratulazioni!", MessageBoxButton.OK);
-          NavigationService.Navigate(new Uri("/Game.xaml?level=" + (level.getLevel() + 1), UriKind.Relative));
+          AppSettings settings = AppSettings.loadSettings();
+          settings.unlockLevel(level.getLevel() + 1);
+          NavigationService.Navigate(new Uri("/Game.xaml?level=" + (settings.getLevel()), UriKind.Relative));
+          AppSettings.saveSettings(settings);
           NavigationService.RemoveBackEntry();
         }
       }

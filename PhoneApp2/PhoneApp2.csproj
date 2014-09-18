@@ -100,6 +100,7 @@
     <Compile Include="src\Ball.cs" />
     <Compile Include="src\Hole.cs" />
     <Compile Include="src\Level.cs" />
+    <Compile Include="src\AppSettings.cs" />
     <Compile Include="src\Wall.cs" />
   </ItemGroup>
   <ItemGroup>

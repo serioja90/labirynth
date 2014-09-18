@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Windows.Media;
+using PhoneApp2.src;
 
 namespace PhoneApp2{
   public partial class menuSceltaLivello : PhoneApplicationPage{
@@ -16,7 +17,7 @@ namespace PhoneApp2{
     int greatestLevel;
     public menuSceltaLivello(){
       InitializeComponent();
-      greatestLevel = 1;
+      greatestLevel = AppSettings.loadSettings().getUnlockedLevel();
       activeColor = new SolidColorBrush(new Color() { A = 0x99, R = 0x21, G = 0xE2, B = 0x18 });
       lockedColor = new SolidColorBrush(new Color() { A = 0x99, R = 0xEA, G = 0x00, B = 0x00 });
       foreach(Button button in ContentPanel.Children){
