@@ -21,3 +21,23 @@ C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Re
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Release\FarseerPhysics WP7.dll
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\Bin\Release\FarseerPhysics WP7.pdb
 C:\Users\sergiu\Documents\Visual Studio 2012\Projects\PhoneApp2\PhoneApp2\obj\Release\PhoneApp2.csprojResolveAssemblyReference.cache
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\ApplicationIcon.png
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\Background.png
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\PhoneApp2.dll
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\PhoneApp2.pdb
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\AppManifest.xaml
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\PhoneApp2.xap
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\Microsoft.Phone.Controls.dll
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\Bin\Release\Microsoft.Phone.Controls.xml
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\App.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\Game.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\MainPage.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\menuSceltaLivello.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\pagGuida.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\pagInfo.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\pagOpzioni.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\pagSottomenuGioca.g.cs
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\PhoneApp2.g.resources
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\PhoneApp2.dll
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\PhoneApp2.pdb
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Release\XapCacheFile.xml

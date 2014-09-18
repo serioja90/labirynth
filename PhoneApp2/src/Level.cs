@@ -46,13 +46,13 @@ namespace PhoneApp2.src {
             break;
           case 'S':
             this.start.X = x + wallSize / 2;
-            this.start.Y = y + wallSize / 2;
+            this.start.Y = y + wallSize;
             x += wallSize;
             break;
           case 'F':
             Point newFinish = this.finish.getPosition();
             newFinish.X = x + wallSize / 2;
-            newFinish.Y = y + wallSize / 2;
+            newFinish.Y = y + wallSize;
             this.finish.setPosition(newFinish);
             x += wallSize;
             break;

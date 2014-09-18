@@ -77,3 +77,4 @@ C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.g.resources
 C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.dll
 C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.pdb
 C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\XapCacheFile.xml
+C:\Users\sergiu\Documents\labirynth\PhoneApp2\obj\Debug\PhoneApp2.csprojResolveAssemblyReference.cache
