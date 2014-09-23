@@ -21,6 +21,10 @@
         <!--ContentPanel - inserire ulteriore contenuto qui-->
         <Grid x:Name="ContentPanel">
             <Canvas x:Name="canvas" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="800" Width="480"/>
+            <TextBlock x:Name="time" HorizontalAlignment="Left" Margin="372,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104">
+            	<Run Text="00:00:00"/>
+            	<Run Text=".00"/>
+            </TextBlock>
             <Grid.Background>
                 <ImageBrush ImageSource="/resources/img/wood_texture.jpg" Stretch="UniformToFill"/>
             </Grid.Background>

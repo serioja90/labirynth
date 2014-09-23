@@ -25,6 +25,7 @@ namespace PhoneApp2 {
     private Ball ball;
     private Level level;
     private int updateRate = 20; //ms
+    private long elapsedTime;
     DispatcherTimer timer;
     World world;
     Body ballBody;
@@ -45,6 +46,7 @@ namespace PhoneApp2 {
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e) {
+      elapsedTime = 0;
       String levelParam = NavigationContext.QueryString["level"].ToString();
       Debug.WriteLine("LEVEL: " + levelParam);
       currentLevel = levelParam == null ? 1 : Int16.Parse(levelParam);
@@ -103,6 +105,13 @@ namespace PhoneApp2 {
         world.Step(updateRate / 1000.0f);
         Dispatcher.BeginInvoke(() => {
           ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
+        });
+        Dispatcher.BeginInvoke(() => {
+          elapsedTime += updateRate;
+          int milliseconds = (int)((elapsedTime % 1000) / 10);
+          int seconds = (int)(elapsedTime % 60000 / 1000);
+          int minutes = (int)(elapsedTime % 3600000 / 60000);
+          time.Text = String.Format("{0:00}",minutes) + String.Format(":{0:00}",seconds) + String.Format(".{0:00}",milliseconds);
         });
         if (ball.distanceFrom(level.getFinish()) <= ball.getRadius()/2.0f) {
           // level completed, go to next level
