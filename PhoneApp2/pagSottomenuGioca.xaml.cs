@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using PhoneApp2.src;
 
 namespace PhoneApp2 {
   public partial class pagSottomenuGioca : PhoneApplicationPage{
@@ -19,7 +20,7 @@ namespace PhoneApp2 {
     }
 
     private void Button_Click(object sender, RoutedEventArgs e) {
-      NavigationService.Navigate(new Uri("/Game.xaml?level=1", UriKind.Relative));
+      NavigationService.Navigate(new Uri("/Game.xaml?level=" + AppSettings.loadSettings().getUnlockedLevel(), UriKind.Relative));
     }
   }
 }
