@@ -24,6 +24,7 @@ namespace PhoneApp2 {
     private int currentLevel;
     private Ball ball;
     private Level level;
+    private int updateRate = 20; //ms
     DispatcherTimer timer;
     World world;
     Body ballBody;
@@ -31,13 +32,14 @@ namespace PhoneApp2 {
     public Game() {
       InitializeComponent();
       accelerometer = new Microsoft.Devices.Sensors.Accelerometer();
+      accelerometer.TimeBetweenUpdates += TimeSpan.FromMilliseconds(updateRate);
       accelerometer.CurrentValueChanged += OnCurrentValueChanged;
       accelerometer.Start();
       ConvertUnits.SetDisplayUnitToSimUnitRatio(50f);
       world = new World(Vector2.Zero);
       LayoutRoot.SizeChanged += onGridSizeChanged;
       timer = new DispatcherTimer();
-      timer.Interval = new System.TimeSpan(0, 0, 0, 0, 20); // timer interval in milliseconds
+      timer.Interval = TimeSpan.FromMilliseconds(updateRate);
       timer.Tick += onTick;
       timer.Start();
     }
@@ -98,9 +100,11 @@ namespace PhoneApp2 {
     private void onTick(object sender, System.EventArgs e) {
       if (ball != null && level != null && currentAcceleration != null) {
         ballBody.ApplyForce(new Vector2(currentAcceleration.X * 9.8f, -currentAcceleration.Y * 9.8f));
-        world.Step(0.02f);
-        ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
-        if (ball.distanceFrom(level.getFinish()) <= ball.getRadius()) {
+        world.Step(updateRate / 1000.0f);
+        Dispatcher.BeginInvoke(() => {
+          ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
+        });
+        if (ball.distanceFrom(level.getFinish()) <= ball.getRadius()/2.0f) {
           // level completed, go to next level
           timer.Stop();
           accelerometer.Stop();
