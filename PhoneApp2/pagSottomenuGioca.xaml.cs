@@ -16,11 +16,21 @@ namespace PhoneApp2 {
     }
 
     private void selezionaLivello_Click(object sender, RoutedEventArgs e){
-      NavigationService.Navigate(new Uri("/menuSceltaLivello.xaml",UriKind.Relative));
+      NavigationService.Navigate(new Uri("/menuSceltaLivello.xaml", UriKind.Relative));
     }
 
     private void Button_Click(object sender, RoutedEventArgs e) {
-      NavigationService.Navigate(new Uri("/Game.xaml?level=" + AppSettings.loadSettings().getUnlockedLevel(), UriKind.Relative));
+        AppSettings settings = AppSettings.loadSettings();
+        if (settings.getLevel() > 5)
+        {
+            MessageBox.Show("Hai già terminato tutti i livelli!", "Verrai reindirizzato al menù dei livelli.", MessageBoxButton.OK);
+            NavigationService.Navigate(new Uri("/menuSceltaLivello.xaml", UriKind.Relative));
+            NavigationService.RemoveBackEntry();
+        }
+        else
+        {
+            NavigationService.Navigate(new Uri("/Game.xaml?level=" + settings.getUnlockedLevel(), UriKind.Relative));
+        }
     }
   }
 }

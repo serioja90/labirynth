@@ -121,9 +121,19 @@ namespace PhoneApp2 {
           MessageBox.Show("Livello completato!", "Cogratulazioni!", MessageBoxButton.OK);
           AppSettings settings = AppSettings.loadSettings();
           settings.unlockLevel(level.getLevel() + 1);
-          NavigationService.Navigate(new Uri("/Game.xaml?level=" + (settings.getLevel()), UriKind.Relative));
-          AppSettings.saveSettings(settings);
-          NavigationService.RemoveBackEntry();
+          if (level.getLevel() > 5)
+          {
+              MessageBox.Show("Hai terminato tutti i livelli!", "Cogratulazioni!", MessageBoxButton.OK);
+              NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+              AppSettings.saveSettings(settings);
+              NavigationService.RemoveBackEntry();
+          }
+          else
+          {
+              NavigationService.Navigate(new Uri("/Game.xaml?level=" + (settings.getLevel()), UriKind.Relative));
+              AppSettings.saveSettings(settings);
+              NavigationService.RemoveBackEntry();
+          }
         }
       }
     }
