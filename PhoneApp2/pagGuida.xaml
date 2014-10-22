@@ -25,7 +25,7 @@
 
         <!--ContentPanel - inserire ulteriore contenuto qui-->
         <Grid x:Name="ContentPanel" Grid.RowSpan="2" Background="#99000000">
-            <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="Guida" VerticalAlignment="Top" Height="582" Width="460"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,176,0,0" TextWrapping="Wrap" Text="Questa app consente di risolvere labirinti usando l'accelerometro.&#13;Al momento sono disponibili 6 livelli di gioco, ognuno sbloccabile una volta risolto l'ultimo labirinto disponibile.&#13;La risoluzione dei labirinti è monitorata da un cronometro e alla risoluzione viene assegnato un punteggio in base al tempo impiegato. Più tempo viene usato, meno punti vengono dati." VerticalAlignment="Top" Height="582" Width="410"/>
 
         </Grid>
 
