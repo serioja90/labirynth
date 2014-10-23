@@ -39,5 +39,10 @@ namespace PhoneApp2.src {
       if (level > unlockedLevel) this.unlockedLevel = level; ;
       this.level = level;
     }
+
+    public void clearProgress() {
+      appSettings["level"] = "1";
+      appSettings["unlockedLevel"] = "1";
+    }
   }
 }
