@@ -27,6 +27,7 @@ namespace PhoneApp2 {
     private int updateRate = 20; //ms
     private long elapsedTime;
     DispatcherTimer timer;
+    Stopwatch crono;
     World world;
     Body ballBody;
     Microsoft.Xna.Framework.Vector3 currentAcceleration;
@@ -43,6 +44,8 @@ namespace PhoneApp2 {
       timer.Interval = TimeSpan.FromMilliseconds(updateRate);
       timer.Tick += onTick;
       timer.Start();
+      crono = new Stopwatch();
+      crono.Start();
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e) {
@@ -106,21 +109,21 @@ namespace PhoneApp2 {
         Dispatcher.BeginInvoke(() => {
           ball.setPosition(new System.Windows.Point(ConvertUnits.ToDisplayUnits(ballBody.Position.X), ConvertUnits.ToDisplayUnits(ballBody.Position.Y)));
         });
+        TimeSpan ts = crono.Elapsed;
         Dispatcher.BeginInvoke(() => {
-          elapsedTime += updateRate;
-          int milliseconds = (int)((elapsedTime % 1000) / 10);
-          int seconds = (int)(elapsedTime % 60000 / 1000);
-          int minutes = (int)(elapsedTime % 3600000 / 60000);
-          time.Text = String.Format("{0:00}",minutes) + String.Format(":{0:00}",seconds) + String.Format(".{0:00}",milliseconds);
+          time.Text = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+            ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
         });
         if (ball.distanceFrom(level.getFinish()) <= ball.getRadius()/2.0f) {
           // level completed, go to next level
           timer.Stop();
+          crono.Stop();
           accelerometer.Stop();
           Debug.WriteLine("LEVEL COMPLETED");
           MessageBox.Show("Livello completato!", "Cogratulazioni!", MessageBoxButton.OK);
           AppSettings settings = AppSettings.loadSettings();
           settings.unlockLevel(level.getLevel() + 1);
+          int punteggio = ts.TotalMinutes < 5 ? (int)Math.Round(-206.61157 * ts.TotalMinutes + 1033) : 0;
           if (level.getLevel() > 5)
           {
               MessageBox.Show("Hai terminato tutti i livelli!", "Cogratulazioni!", MessageBoxButton.OK);
