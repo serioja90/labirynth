@@ -126,7 +126,7 @@ namespace PhoneApp2 {
           int punteggio = ts.TotalMinutes < 5 ? (int)Math.Round(-206.61157 * ts.TotalMinutes + 1033) : 0;
           if (level.getLevel() > 5)
           {
-              MessageBox.Show("Hai terminato tutti i livelli!", "Cogratulazioni!", MessageBoxButton.OK);
+              MessageBox.Show("Hai terminato tutti i livelli!", "Congratulazioni!", MessageBoxButton.OK);
               NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
               AppSettings.saveSettings(settings);
               NavigationService.RemoveBackEntry();
