@@ -32,5 +32,15 @@ namespace PhoneApp2 {
             NavigationService.Navigate(new Uri("/Game.xaml?level=" + settings.getUnlockedLevel(), UriKind.Relative));
         }
     }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+        NavigationService.Navigate(new Uri("/pagStatistiche.xaml", UriKind.Relative));
+    }
+
+    private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+    {
+        NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+    }
   }
 }

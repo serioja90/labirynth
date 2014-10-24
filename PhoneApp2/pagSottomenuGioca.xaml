@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" BackKeyPress="PhoneApplicationPage_BackKeyPress">
 
     <!--LayoutRoot è la griglia radice in cui viene inserito tutto il contenuto della pagina-->
     <Grid x:Name="LayoutRoot">
@@ -27,7 +27,7 @@
         <Grid x:Name="ContentPanel" Background="#99000000" Grid.RowSpan="2">
             <Button Content="Seleziona livello" HorizontalAlignment="Right" Margin="0,0,123,426" VerticalAlignment="Bottom" Height="83" Click="selezionaLivello_Click" Background="#B0000000"/>
             <Button Content="Carriera" HorizontalAlignment="Right" Margin="0,0,123,312" VerticalAlignment="Bottom" Width="234" Height="83" Click="Button_Click" Background="#B0000000"/>
-            <Button Content="Statistiche" HorizontalAlignment="Right" Margin="0,0,123,197" VerticalAlignment="Bottom" Width="234" Height="83" Background="#B0000000"/>
+            <Button Content="Statistiche" HorizontalAlignment="Right" Margin="0,0,123,197" VerticalAlignment="Bottom" Width="234" Height="83" Background="#B0000000" Click="Button_Click_1"/>
         </Grid>
 
         <!--ContentPanel - inserire ulteriore contenuto qui-->

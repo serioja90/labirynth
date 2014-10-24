@@ -41,6 +41,14 @@ namespace PhoneApp2
             NavigationService.Navigate(new Uri("/pagOpzioni.xaml", UriKind.Relative));
         }
 
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            while (NavigationService.RemoveBackEntry() != null)
+            {
+                NavigationService.RemoveBackEntry();
+            }
+        }
+
 
     }
 }

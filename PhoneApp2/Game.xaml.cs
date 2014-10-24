@@ -124,18 +124,19 @@ namespace PhoneApp2 {
           AppSettings settings = AppSettings.loadSettings();
           settings.unlockLevel(level.getLevel() + 1);
           int punteggio = ts.TotalMinutes < 5 ? (int)Math.Round(-206.61157 * ts.TotalMinutes + 1033) : 0;
+          settings.insertNewResults(ts.TotalMilliseconds, punteggio, level.getLevel());
           if (level.getLevel() > 5)
           {
               MessageBox.Show("Hai terminato tutti i livelli!", "Congratulazioni!", MessageBoxButton.OK);
+              NavigationService.RemoveBackEntry();
               NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
               AppSettings.saveSettings(settings);
-              NavigationService.RemoveBackEntry();
           }
           else
           {
+              NavigationService.RemoveBackEntry();
               NavigationService.Navigate(new Uri("/Game.xaml?level=" + (settings.getLevel()), UriKind.Relative));
               AppSettings.saveSettings(settings);
-              NavigationService.RemoveBackEntry();
           }
         }
       }
@@ -145,6 +146,11 @@ namespace PhoneApp2 {
     private void OnCurrentValueChanged(object sender, Microsoft.Devices.Sensors.SensorReadingEventArgs<Microsoft.Devices.Sensors.AccelerometerReading> e) {
       AccelerometerReading reading = e.SensorReading;
       currentAcceleration = reading.Acceleration;
+    }
+
+    private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
+    {
+        NavigationService.Navigate(new Uri("/pagSottomenuGioca.xaml", UriKind.Relative));
     }
   }
 }
