@@ -53,7 +53,7 @@ namespace PhoneApp2 {
                 return;
             }
             _contentLoaded = true;
-            System.Windows.Application.LoadComponent(this, new System.Uri("/Labyrinth;component/pagStatistiche.xaml", System.UriKind.Relative));
+            System.Windows.Application.LoadComponent(this, new System.Uri("/Labyrinth%20on%20fire;component/pagStatistiche.xaml", System.UriKind.Relative));
             this.LayoutRoot = ((System.Windows.Controls.Grid)(this.FindName("LayoutRoot")));
             this.ContentPanel = ((System.Windows.Controls.Grid)(this.FindName("ContentPanel")));
             this.stats = ((System.Windows.Controls.TextBlock)(this.FindName("stats")));

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{6b20fa90-a987-4bb8-a3ba-f82c48ec80e5}" Title="Labyrinth" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PhoneApp2 author" Description="Sample description" Publisher="PhoneApp2">
+  <App xmlns="" ProductID="{6b20fa90-a987-4bb8-a3ba-f82c48ec80e5}" Title="Labyrinth on fire" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PhoneApp2 author" Description="Sample description" Publisher="PhoneApp2">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />
@@ -26,7 +26,7 @@
         <TemplateType5>
           <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Labyrinth</Title>
+          <Title>Labyrinth of fire</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>
