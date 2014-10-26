@@ -26,8 +26,6 @@
         <!--ContentPanel - inserire ulteriore contenuto qui-->
         <Grid x:Name="ContentPanel" Grid.RowSpan="2" Background="#99000000">
             <Button Content="Cancella progressi" HorizontalAlignment="Left" Margin="86,0,0,411" VerticalAlignment="Bottom" Height="83" Width="315" Background="#B0000000" Click="Clear_Progress"/>
-            <Button Content="Imposta accelerometro" HorizontalAlignment="Left" Margin="86,0,0,288" VerticalAlignment="Bottom" Height="83" Background="#B0000000"/>
-            <Button Content="Audio" HorizontalAlignment="Left" Margin="86,0,0,157" VerticalAlignment="Bottom" Height="83" Width="315" Background="#B0000000"/>
 
         </Grid>
 

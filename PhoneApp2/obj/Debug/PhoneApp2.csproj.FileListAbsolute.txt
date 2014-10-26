@@ -99,3 +99,4 @@ C:\Users\Alessandro\Documents\Github\labirynth\PhoneApp2\obj\Debug\PhoneApp2.g.r
 C:\Users\Alessandro\Documents\Github\labirynth\PhoneApp2\obj\Debug\PhoneApp2.dll
 C:\Users\Alessandro\Documents\Github\labirynth\PhoneApp2\obj\Debug\PhoneApp2.pdb
 C:\Users\Alessandro\Documents\Github\labirynth\PhoneApp2\obj\Debug\XapCacheFile.xml
+C:\Users\Alessandro\Documents\Github\labirynth\PhoneApp2\obj\Debug\pagStatistiche.g.cs

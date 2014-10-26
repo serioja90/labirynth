@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PhoneApp2</RootNamespace>
-    <AssemblyName>PhoneApp2</AssemblyName>
+    <RootNamespace>Labyrinth</RootNamespace>
+    <AssemblyName>Labyrinth</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
@@ -20,7 +20,7 @@
     </SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>PhoneApp2.xap</XapFilename>
+    <XapFilename>Labyrinth.xap</XapFilename>
     <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
     <SilverlightAppEntry>PhoneApp2.App</SilverlightAppEntry>
     <ValidateXaml>true</ValidateXaml>
@@ -96,6 +96,9 @@
     <Compile Include="pagSottomenuGioca.xaml.cs">
       <DependentUpon>pagSottomenuGioca.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pagStatistiche.xaml.cs">
+      <DependentUpon>pagStatistiche.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Ball.cs" />
     <Compile Include="src\Hole.cs" />
@@ -133,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="pagSottomenuGioca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pagStatistiche.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
